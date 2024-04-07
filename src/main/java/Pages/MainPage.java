@@ -8,7 +8,7 @@ public class MainPage extends BaseTest {
 
     By lblErrorMessage1 = By.xpath("//*[@id=\"rightPanel\"]/p");
 
-    By lblErrorMessage2 = By.cssSelector("//*[@id=\"rightPanel\"]/p");
+    By lblErrorMessage2 = By.xpath("//*[@id=\"rightPanel\"]/p"); //By.cssSelector("[class='error']");
 
 
 

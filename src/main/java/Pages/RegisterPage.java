@@ -15,7 +15,7 @@ public class RegisterPage extends BaseTest {
     By txtPhoneNumber = By.id("customer.phoneNumber");
     By txtSSN = By.id("customer.ssn");
     By txtUsername = By.id("customer.username");
-    By lblErrorUsername = By.id("customer.username.errors");
+    By lblErrorUsername = By.cssSelector("[id='customer.username.errors']");
     By txtPassword = By.id("customer.password");
     By txtRepeatedPassword = By.id("repeatedPassword");
 
