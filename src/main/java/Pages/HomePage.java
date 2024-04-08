@@ -1,8 +1,8 @@
 package Pages;
-
 import Base.BaseTest;
-import org.junit.Assert;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 public class HomePage extends BaseTest {
 
@@ -10,6 +10,7 @@ public class HomePage extends BaseTest {
 
     By lblUsername = By.cssSelector("[id ='rightPanel'] h1");
 
+    @Step("Sayfa Kontrolü: {title}")
     public HomePage pageControl(String title){
         String text = driver.findElement(objTitle).getText();
 

@@ -1,8 +1,9 @@
 package Pages;
 
 import Base.BaseTest;
-import org.junit.Assert;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 public class MainPage extends BaseTest {
 
@@ -11,13 +12,15 @@ public class MainPage extends BaseTest {
     By lblErrorMessage2 = By.xpath("//*[@id=\"rightPanel\"]/p"); //By.cssSelector("[class='error']");
 
 
-
+    @Step("Hata Mesajı Görüntülenir: {errorMessage}")
     public MainPage errorMessageControl(String errorMessage){
         String text = driver.findElement(lblErrorMessage1).getText();
 
         Assert.assertEquals(text, errorMessage);
         return this;
     }
+
+    @Step("2. Hata Mesajı Görüntülenir: {errorMessage}")
 
     public MainPage errorMessageControl2(String errorMessage){
         String text = driver.findElement(lblErrorMessage2).getText();

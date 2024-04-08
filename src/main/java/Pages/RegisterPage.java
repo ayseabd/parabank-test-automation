@@ -1,8 +1,7 @@
 package Pages;
-
 import Base.BaseTest;
-import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 public class RegisterPage extends BaseTest {
     By txtFirstName = By.id("customer.firstName");

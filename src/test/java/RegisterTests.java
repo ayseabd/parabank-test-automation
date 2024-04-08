@@ -2,7 +2,7 @@ import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.RegisterPage;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class RegisterTests extends BaseTest {
 
@@ -12,7 +12,7 @@ public class RegisterTests extends BaseTest {
     HomePage homePage = new HomePage();
 
 
-    @Test
+    @Test (description = "Kullanıcı Oluşturma Testi")
     public void userCreate(){
         String username="testqa"+createRandomNumber(100000);
 
@@ -38,7 +38,7 @@ public class RegisterTests extends BaseTest {
 
     }
 
-    @Test
+    @Test (description = "Geçersiz Kullanıcı Adı Testi")
     public void userNameNotValid(){
 
         String username="testqa123456";

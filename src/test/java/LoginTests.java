@@ -2,7 +2,7 @@ import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.MainPage;
-import org.junit.*;
+import org.testng.annotations.Test;
 
 
 public class LoginTests extends BaseTest
@@ -13,7 +13,7 @@ public class LoginTests extends BaseTest
 
 
 
-    @Test
+    @Test (description = "TC0001")
     public void FailUserTEST(){
 
         loginPage
@@ -25,7 +25,7 @@ public class LoginTests extends BaseTest
                 .errorMessageControl(errorMessage1);
     }
 
-    @Test
+    @Test (description = "TC0002")
     public void FailPasswordTEST(){
 
       loginPage
@@ -35,7 +35,7 @@ public class LoginTests extends BaseTest
               .errorMessageControl2(errorMessage2);
     }
 
-    @Test
+    @Test (description = "TC0003")
     public void NoneDataTEST(){
 
         loginPage
@@ -46,7 +46,7 @@ public class LoginTests extends BaseTest
                 .errorMessageControl2(errorMessage2);
     }
 
-    @Test
+    @Test (description = "TC0004")
     public void MinimumCharTEST(){
 
         loginPage
@@ -57,7 +57,7 @@ public class LoginTests extends BaseTest
                .errorMessageControl2(errorMessage1);
     }
 
-    @Test
+    @Test (description = "TC0005")
     public void MaxCharTEST(){
 
         loginPage
@@ -68,7 +68,7 @@ public class LoginTests extends BaseTest
                 .errorMessageControl2(errorMessage1);
     }
 
-    @Test
+    @Test (description = "Sisteme Başarılı Giriş Testi")
     public void SuccessTEST(){
 
         loginPage

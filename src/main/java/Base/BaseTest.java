@@ -4,14 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.junit.*;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends BaseLib {
 
     public static WebDriver driver;
 
-    @Before
+    @BeforeMethod
     public void BeforeTest() {
 
         if (browser.equals("Firefox")) {
@@ -28,7 +29,7 @@ public class BaseTest extends BaseLib {
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
     }
 
-    @After
+    @AfterMethod
     public void afterTest() {
 
         driver.quit();
