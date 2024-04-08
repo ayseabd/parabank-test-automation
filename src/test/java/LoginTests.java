@@ -2,9 +2,11 @@ import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.MainPage;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 
 
+@Feature("Login Test Senaryoları")
 public class LoginTests extends BaseTest
 {
     LoginPage loginPage = new LoginPage();

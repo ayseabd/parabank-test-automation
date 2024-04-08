@@ -2,6 +2,7 @@ import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.RegisterPage;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 
 public class RegisterTests extends BaseTest {
@@ -11,7 +12,7 @@ public class RegisterTests extends BaseTest {
 
     HomePage homePage = new HomePage();
 
-
+@Feature("Register Test Senaryoları")
     @Test (description = "Kullanıcı Oluşturma Testi")
     public void userCreate(){
         String username="testqa"+createRandomNumber(100000);
