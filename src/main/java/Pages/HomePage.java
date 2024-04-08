@@ -18,6 +18,7 @@ public class HomePage extends BaseTest {
         return this;
     }
 
+    @Step("Kullanıcı Adı Kontrolü {title}")
     public HomePage usernameControl(String title){
         String text = driver.findElement(lblUsername).getText();
 

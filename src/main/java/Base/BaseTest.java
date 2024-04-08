@@ -25,7 +25,7 @@ public class BaseTest extends BaseLib {
             driver = new SafariDriver();
         }
 
-
+        driver.manage().window().maximize();
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
     }
 

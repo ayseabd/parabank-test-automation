@@ -32,6 +32,7 @@ public class LoginPage extends BaseTest {
         return this;
     }
 
+    @Step("Register Butonuna Tıklanır")
     public LoginPage clickRegister(){
         driver.findElement(btnRegister).click();
         return this;
